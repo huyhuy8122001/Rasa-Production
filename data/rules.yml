@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Tell about agent
+  steps:
+  - intent: chat_with_agent
+  - action: utter_upper_status

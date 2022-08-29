@@ -28,3 +28,10 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: path redirect to agent
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: chat_with_agent
+  - action: utter_upper_status
