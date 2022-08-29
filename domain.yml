@@ -1,33 +1,66 @@
 version: "3.1"
-
 intents:
-  - greet
-  - goodbye
   - affirm
+  - bot_challenge
   - deny
+  - goodbye
+  - greet
   - mood_great
   - mood_unhappy
-  - bot_challenge
-
+  - khách_bắt_đầu
+  - khách_đưa_tên
+  - sp_tổng_đài
+  - khách_chọn_gói_Pro
+  - khách_chọn_gói_Business
+  - khách_chọn_gói_Custom
+  
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
+    - text: Hey! How are you?
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+    - text: "Here is something to cheer you up:"
+      image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+    - text: Did that help you?
   utter_happy:
-  - text: "Great, carry on!"
-
+    - text: Great, carry on!
   utter_goodbye:
-  - text: "Bye"
-
+    - text: Bye
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: I am a bot, powered by Rasa.
+  utter_chào:
+    - text: Chào quý khách! Em có thể xưng hô quý khách như thế nào được ạ?
+  utter_chào_có_entity:
+    - text: Dạ vâng {pronoun} {name}.
+  utter_hỏi_danh_mục_sản_phẩm:
+    - text: Không biết {pronoun} muốn tìm hiểu về sản phẩm nào bên em ạ? Chúng em cung cấp các sản phẩm Đầu số, Tổng đài và Thiết bị.
+  utter_cung_cấp_thông_tin_tổng_đài:
+    - text: Dạ tổng đài bên em hiện có 3 gói dịch vụ chính. Bao gồm gói Pro, gói Business và gói Custom. {pronoun} muốn đăng ký gói nào ạ?
+  utter_gói_Pro:
+    - text: Gói Pro bao gồm bla bla
+  utter_gói_Business:
+    - text: Gói Business bao gồm bla bla
+  utter_gói_Custom:
+    - text: Gói Custom bao gồm bla bla
+
+entities:
+  - pronoun
+  - name
+
+slots:
+  pronoun:
+    type: text
+    influence_conversation: false
+    initial_value: anh
+    mappings:
+      - type: from_entity
+        entity: pronoun
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: name
 
 session_config:
   session_expiration_time: 60

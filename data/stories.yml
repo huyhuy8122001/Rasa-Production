@@ -28,3 +28,32 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: chào hỏi
+  steps:
+  - intent: khách_bắt_đầu
+  - action: utter_chào
+  - intent: khách_đưa_tên
+  - action: utter_chào_có_entity
+  - action: utter_hỏi_danh_mục_sản_phẩm
+
+- story: tìm hiểu tổng đài Pro
+  steps:
+  - intent: sp_tổng_đài
+  - action: utter_cung_cấp_thông_tin_tổng_đài
+  - intent: khách_chọn_gói_Pro
+  - action: utter_gói_Pro
+
+- story: tìm hiểu tổng đài Business
+  steps:
+  - intent: sp_tổng_đài
+  - action: utter_cung_cấp_thông_tin_tổng_đài
+  - intent: khách_chọn_gói_Business
+  - action: utter_gói_Business
+
+- story: tìm hiểu tổng đài Custom
+  steps:
+  - intent: sp_tổng_đài
+  - action: utter_cung_cấp_thông_tin_tổng_đài
+  - intent: khách_chọn_gói_Custom
+  - action: utter_gói_Custom

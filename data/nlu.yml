@@ -1,91 +1,134 @@
 version: "3.1"
-
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - chào
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - tôi tên là Cường
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: khách_bắt_đầu
+    examples: |
+      - Chào
+      - Xin chào
+      - hi
+      - hello
+      - chào bạn
+  - intent: khách_đưa_tên
+    examples: |
+      - tôi tên là [Cường]{"entity": "name"}
+      - [anh]{"entity": "pronoun"} tên [Huy]{"entity": "name"}
+      - [chị]{"entity": "pronoun"} [Nhi]{"entity": "name"} nha em
+      - gọi [anh]{"entity": "pronoun"} [Đạt]{"entity": "name"} đi
+      - [Duy]{"entity": "name"}
+      - [sếp]{"entity": "pronoun"} [Toán]{"entity": "name"}
+      - [anh]{"entity": "pronoun"} [Toán]{"entity": "name"}
+  - intent: sp_tổng_đài
+    examples: |
+      - sản phẩm tổng đài
+      - tổng đài
+      - tổng đài đi em
+      - [anh]{"entity": "pronoun"} muốn tìm hiểu về tổng đài
+      - cho [anh]{"entity": "pronoun"} biết thêm về tổng đài
+      - [anh]{"entity": "pronoun"} cần tổng 
+  - intent: khách_chọn_gói_Pro
+    examples: |
+      - gói Pro
+      - chọn gói Pro
+      - Pro
+      - pro
+      - tổng đài Pro
+      - tổng đài gói pro
+  - intent: khách_chọn_gói_Business
+    examples: |
+      - gói Business
+      - chọn gói Business
+      - Business
+      - business
+      - tổng đài Business
+      - tổng đài gói business
+  - intent: khách_chọn_gói_Custom
+    examples: |
+      - gói Custom
+      - chọn gói Custom
+      - Custom
+      - custom
+      - tổng đài Custom
+      - tổng đài gói custom
