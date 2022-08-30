@@ -1,5 +1,6 @@
 version: "3.1"
 nlu:
+
 - intent: khách_bắt_đầu
   examples: |
     - Chào
@@ -7,6 +8,12 @@ nlu:
     - hi
     - hello
     - chào bạn
+    - chào em
+    - Aloha
+    - chào buổi sáng
+    - chào buổi chiều
+    - chào buổi tối
+
 - intent: khách_đưa_tên
   examples: |
     - tôi tên là [Cường](name)
@@ -16,6 +23,7 @@ nlu:
     - [Duy](name)
     - [sếp](pronoun) [Toán](name)
     - [anh](pronoun) [Toán](name)
+
 - intent: sp_thiết_bị
   examples: |
     - danh mục thiết bị
@@ -30,9 +38,11 @@ nlu:
     - công ty bán thiết bị gì
     - bán thiết bị nào
     - có bán thiết bị nào không
-- intent: điện_thoại
+
+- intent: phone
   examples: |
     - điện thoại
+    - điện thoại đi
     - điện thoại ip
     - tôi muốn xem điện thoại
     - cho tôi xem điện thoại
@@ -40,33 +50,32 @@ nlu:
     - điện thoại bên mình cung cấp những loại nào
     - [anh](pronoun) cần tìm hiểu về điện thoại
     - [chị](pronoun) muốn biết thêm về điện thoại
-    - Grandstream GRP2601/GRP2601P
-    - Grandstream
-    - GRP2601/GRP2601P
-- intent: tai_nghe
+    - điện thoại này có gì nổi bật hơn các loại khác?
+
+- intent: headphone
   examples: |
     - tai nghe
+    - tai nghe đi
     - tôi muốn xem tai nghe
     - cho tôi xem tai nghe
     - tai nghe có những loại nào
     - tai nghe bên mình cung cấp những loại nào
     - [anh](pronoun) cần tìm hiểu về tai nghe
     - [chị](pronoun) muốn biết thêm về tai nghe
-    - DQN HS212
-    - HS212
-    - DQN
-- intent: gateway
+    - tai nghe này có gì nổi bật so với trên thị trường vậy
+
+- intent: webcam
   examples: |
-    - gateway
-    - tôi muốn xem gateway
-    - cho tôi xem gateway
-    - gateway có những loại nào
-    - gateway bên mình cung cấp những loại nào
-    - [anh](pronoun) cần tìm hiểu về gateway
-    - [chị](pronoun) muốn biết thêm về gateway
-    - Yeastar TA1610
-    - TA1610
-    - Yeastar
+    - webcam
+    - webcam đi
+    - tôi muốn xem webcam
+    - cho tôi xem webcam
+    - webcam có những loại nào
+    - webcam bên mình cung cấp những loại nào
+    - [anh](pronoun) cần tìm hiểu về webcam
+    - [chị](pronoun) muốn biết thêm về webcam
+    - webcam có gì đặc sắc vậy em?
+
 - intent: sp_đầu_số
   examples: |
     - danh mục đầu số
@@ -122,6 +131,7 @@ nlu:
     - 1001 nha
     - đầu 1001 nha
     - đầu số 1001 nha
+
 - intent: đầu_số_1002
   examples: |
     - 1002
@@ -142,6 +152,7 @@ nlu:
     - 1002 nha
     - đầu 1002 nha
     - đầu số 1002 nha
+
 - intent: sp_tổng_đài
   examples: |
     - sản phẩm tổng đài
@@ -150,6 +161,7 @@ nlu:
     - [anh](pronoun) muốn tìm hiểu về tổng đài
     - cho [anh](pronoun) biết thêm về tổng đài
     - [anh](pronoun) cần tổng đài
+
 - intent: khách_chọn_gói_Pro
   examples: |
     - gói Pro
@@ -158,6 +170,7 @@ nlu:
     - pro
     - tổng đài Pro
     - tổng đài gói pro
+
 - intent: khách_chọn_gói_Business
   examples: |
     - gói Business
@@ -166,6 +179,7 @@ nlu:
     - business
     - tổng đài Business
     - tổng đài gói business
+
 - intent: khách_chọn_gói_Custom
   examples: |
     - gói Custom
@@ -174,6 +188,7 @@ nlu:
     - custom
     - tổng đài Custom
     - tổng đài gói
+
 - intent: khách_có
   examples: |
     - có
@@ -181,12 +196,28 @@ nlu:
     - yes
     - đúng vậy
     - có đăng ký
+    - cho [anh](pronoun) gặp bộ phận bán hàng
+    - cho [chị](pronoun) liên hệ tới bộ phận bán hàng
+    - liên hệ giúp [anh](pronoun) đi
+    - nối máy giúp [anh](pronoun) với
+    - kết nối hộ [anh](pronoun)
+    - kết nối giùm [anh](pronoun)
+    - liên hệ giùm [chị](pronoun)
+    - chuyển cho [anh](pronoun)
+    - chuyển giúp [anh](pronoun)
+
 - intent: khách_không
   examples: |
     - không
-    - không có
+    - không kết nối
     - no
     - không đăng ký
+    - đừng liên hệ
+    - đừng kết nối
+    - anh không cần
+    - chị ko cần, cảm ơn em
+    - thôi được rồi
+
 - intent: khách_nhầm
   examples: |
     - không phải nhầm rồi

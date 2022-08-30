@@ -5,6 +5,5 @@ rules:
 - rule: khách chọn nhầm
   steps:
   - intent: khách_nhầm
-  - action: utter_chào_có_entity
   - action: utter_hỏi_danh_mục_sản_phẩm
 

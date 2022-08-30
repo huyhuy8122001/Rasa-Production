@@ -6,90 +6,86 @@ stories:
   - intent: khách_bắt_đầu
   - action: utter_chào
   - intent: khách_đưa_tên
-  - action: utter_chào_có_entity
   - action: utter_hỏi_danh_mục_sản_phẩm
 
-- story: tìm hiểu đầu số 1000 - happy
-  steps:
-  - intent: sp_đầu_số
-  - action: utter_cung_cấp_thông_tin_đầu_số
-  - intent: đầu_số_1000
-  - action: utter_đầu_1000
-  - action: utter_xác_nhận_đăng_ký
-  - intent: khách_có
-  - action: utter_đợi_em_chút
-  - action: utter_chuyển_tới_agent
+# - story: tìm hiểu đầu số 1000 - happy
+#   steps:
+#   - intent: sp_đầu_số
+#   - action: utter_cung_cấp_thông_tin_đầu_số
+#   - intent: đầu_số_1000
+#   - action: utter_đầu_1000
+#   
+#   - intent: khách_có
+  
+#   - action: utter_chuyển_tới_agent
 
-- story: tìm hiểu đầu số 1000 - sad
-  steps:
-  - intent: sp_đầu_số
-  - action: utter_cung_cấp_thông_tin_đầu_số
-  - intent: đầu_số_1000
-  - action: utter_đầu_1000
-  - action: utter_xác_nhận_đăng_ký
-  - intent: khách_không
-  - action: utter_tạm_biệt
+# - story: tìm hiểu đầu số 1000 - sad
+#   steps:
+#   - intent: sp_đầu_số
+#   - action: utter_cung_cấp_thông_tin_đầu_số
+#   - intent: đầu_số_1000
+#   - action: utter_đầu_1000
+#   
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
 
-- story: tìm hiểu đầu số 1001 - happy
-  steps:
-  - intent: sp_đầu_số
-  - action: utter_cung_cấp_thông_tin_đầu_số
-  - intent: đầu_số_1001
-  - action: utter_đầu_1001
-  - action: utter_xác_nhận_đăng_ký
-  - intent: khách_có
-  - action: utter_đợi_em_chút
-  - action: utter_chuyển_tới_agent
+# - story: tìm hiểu đầu số 1001 - happy
+#   steps:
+#   - intent: sp_đầu_số
+#   - action: utter_cung_cấp_thông_tin_đầu_số
+#   - intent: đầu_số_1001
+#   - action: utter_đầu_1001
+#   
+#   - intent: khách_có
+  
+#   - action: utter_chuyển_tới_agent
 
-- story: tìm hiểu đầu số 1001 - sad
-  steps:
-  - intent: sp_đầu_số
-  - action: utter_cung_cấp_thông_tin_đầu_số
-  - intent: đầu_số_1001
-  - action: utter_đầu_1001
-  - action: utter_xác_nhận_đăng_ký
-  - intent: khách_không
-  - action: utter_tạm_biệt
+# - story: tìm hiểu đầu số 1001 - sad
+#   steps:
+#   - intent: sp_đầu_số
+#   - action: utter_cung_cấp_thông_tin_đầu_số
+#   - intent: đầu_số_1001
+#   - action: utter_đầu_1001
+#   
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
 
-- story: tìm hiểu đầu số 1002 - happy
-  steps:
-  - intent: sp_đầu_số
-  - action: utter_cung_cấp_thông_tin_đầu_số
-  - intent: đầu_số_1002
-  - action: utter_đầu_1002
-  - action: utter_xác_nhận_đăng_ký
-  - intent: khách_có
-  - action: utter_đợi_em_chút
-  - action: utter_chuyển_tới_agent
+# - story: tìm hiểu đầu số 1002 - happy
+#   steps:
+#   - intent: sp_đầu_số
+#   - action: utter_cung_cấp_thông_tin_đầu_số
+#   - intent: đầu_số_1002
+#   - action: utter_đầu_1002
+#   
+#   - intent: khách_có
+  
+#   - action: utter_chuyển_tới_agent
 
-- story: tìm hiểu đầu số 1002 - sad
-  steps:
-  - intent: sp_đầu_số
-  - action: utter_cung_cấp_thông_tin_đầu_số
-  - intent: đầu_số_1002
-  - action: utter_đầu_1002
-  - action: utter_xác_nhận_đăng_ký
-  - intent: khách_không
-  - action: utter_tạm_biệt
+# - story: tìm hiểu đầu số 1002 - sad
+#   steps:
+#   - intent: sp_đầu_số
+#   - action: utter_cung_cấp_thông_tin_đầu_số
+#   - intent: đầu_số_1002
+#   - action: utter_đầu_1002
+#   
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
 
 - story: tìm hiểu thiết bị điện thoại - happy
   steps:
   - intent: sp_thiết_bị
   - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: điện_thoại
-  - action: utter_điện_thoại
-  - action: utter_xác_nhận_đăng_ký
+  - intent: phone
+  - action: utter_phone
   - intent: khách_có
-  - action: utter_đợi_em_chút
   - action: utter_chuyển_tới_agent
 
 - story: tìm hiểu thiết bị điện thoại - sad
   steps:
   - intent: sp_thiết_bị
   - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: điện_thoại
-  - action: utter_điện_thoại
-  - action: utter_xác_nhận_đăng_ký
+  - intent: phone
+  - action: utter_phone
   - intent: khách_không
   - action: utter_tạm_biệt
 
@@ -97,41 +93,35 @@ stories:
   steps:
   - intent: sp_thiết_bị
   - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: tai_nghe
-  - action: utter_tai_nghe
-  - action: utter_xác_nhận_đăng_ký
+  - intent: headphone
+  - action: utter_headphone
   - intent: khách_có
-  - action: utter_đợi_em_chút
   - action: utter_chuyển_tới_agent
 
 - story: tìm hiểu thiết bị tai nghe - sad
   steps:
   - intent: sp_thiết_bị
   - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: tai_nghe
-  - action: utter_tai_nghe
-  - action: utter_xác_nhận_đăng_ký
+  - intent: headphone
+  - action: utter_headphone
   - intent: khách_không
   - action: utter_tạm_biệt
 
-- story: tìm hiểu thiết bị gateway - happy
+- story: tìm hiểu thiết bị webcam - happy
   steps:
   - intent: sp_thiết_bị
   - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: gateway
-  - action: utter_gateway
-  - action: utter_xác_nhận_đăng_ký
+  - intent: webcam
+  - action: utter_webcam
   - intent: khách_có
-  - action: utter_đợi_em_chút
   - action: utter_chuyển_tới_agent
 
-- story: tìm hiểu thiết bị gateway - sad
+- story: tìm hiểu thiết bị webcam - sad
   steps:
   - intent: sp_thiết_bị
   - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: gateway
-  - action: utter_gateway
-  - action: utter_xác_nhận_đăng_ký
+  - intent: webcam
+  - action: utter_webcam
   - intent: khách_không
   - action: utter_tạm_biệt
 
@@ -141,9 +131,9 @@ stories:
   - action: utter_cung_cấp_thông_tin_tổng_đài
   - intent: khách_chọn_gói_Pro
   - action: utter_gói_Pro
-  - action: utter_xác_nhận_đăng_ký
+  
   - intent: khách_có
-  - action: utter_đợi_em_chút
+  
   - action: utter_chuyển_tới_agent
 
 - story: tìm hiểu tổng đài Pro - sad
@@ -152,7 +142,7 @@ stories:
   - action: utter_cung_cấp_thông_tin_tổng_đài
   - intent: khách_chọn_gói_Pro
   - action: utter_gói_Pro
-  - action: utter_xác_nhận_đăng_ký
+  
   - intent: khách_không
   - action: utter_tạm_biệt
 
@@ -162,9 +152,9 @@ stories:
   - action: utter_cung_cấp_thông_tin_tổng_đài
   - intent: khách_chọn_gói_Business
   - action: utter_gói_Business
-  - action: utter_xác_nhận_đăng_ký
+  
   - intent: khách_có
-  - action: utter_đợi_em_chút
+  
   - action: utter_chuyển_tới_agent
 
 - story: tìm hiểu tổng đài Business - sad
@@ -173,7 +163,7 @@ stories:
   - action: utter_cung_cấp_thông_tin_tổng_đài
   - intent: khách_chọn_gói_Business
   - action: utter_gói_Business
-  - action: utter_xác_nhận_đăng_ký
+  
   - intent: khách_không
   - action: utter_tạm_biệt
 
@@ -183,9 +173,9 @@ stories:
   - action: utter_cung_cấp_thông_tin_tổng_đài
   - intent: khách_chọn_gói_Custom
   - action: utter_gói_Custom
-  - action: utter_xác_nhận_đăng_ký
+  
   - intent: khách_có
-  - action: utter_đợi_em_chút
+  
   - action: utter_chuyển_tới_agent
 
 - story: tìm hiểu tổng đài Custom - sad
@@ -194,7 +184,7 @@ stories:
   - action: utter_cung_cấp_thông_tin_tổng_đài
   - intent: khách_chọn_gói_Custom
   - action: utter_gói_Custom
-  - action: utter_xác_nhận_đăng_ký
+  
   - intent: khách_không
   - action: utter_tạm_biệt
 

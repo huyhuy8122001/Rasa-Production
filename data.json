@@ -1,0 +1,18 @@
+{
+  "DAU_SO": [
+    {
+      "NAME": "đầu số 1000",
+      "DESC": "Dạ đầu số 1000 hiện đang có giá là 1000$"
+    },
+    {
+      "NAME": "đầu số 1001",
+      "DESC": "Dạ đầu số 1001 hiện đang có giá là 2000$"
+    },
+    {
+      "NAME": "đầu số 1002",
+      "DESC": "Dạ đầu số 1002 hiện đang có giá là 3000$"
+    }
+  ],
+  "$tongdai": {},
+  "$thietbi": {}
+}
