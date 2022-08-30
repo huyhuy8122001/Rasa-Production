@@ -1,17 +1,25 @@
 digraph  {
 0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
 "-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
-1 [class="", fontsize=12, label=utter_greet];
-"-5" [class=ellipsis, label="..."];
-4 [class=active, fontsize=12, label=utter_greet_name];
-5 [class="intent dashed active", label="  ?  ", shape=rect];
-6 [class=intent, fillcolor=lightblue, label="/greet", shape=rect, style=filled];
-7 [class="intent active", fillcolor=lightblue, label="/greetwithname", shape=rect, style=filled];
+1 [class=active, fontsize=12, label=action_session_start];
+2 [class=active, fontsize=12, label="utter_cung_cấp_thông_tin_đầu_số"];
+3 [class=active, fontsize=12, label="utter_đầu_1000"];
+4 [class=active, fontsize=12, label="utter_xác_nhận_đăng_ký"];
+5 [class=active, fontsize=12, label="utter_đợi_em_chút"];
+6 [class=active, fontsize=12, label="utter_chuyển_tới_agent"];
+7 [class="intent dashed active", label="  ?  ", shape=rect];
+8 [class="intent active", fillcolor=lightblue, label="/sp_đầu_số", shape=rect, style=filled];
+9 [class="intent active", fillcolor=lightblue, label="/khách_chọn_đầu_một_nghìn", shape=rect, style=filled];
+10 [class="intent active", fillcolor=lightblue, label="/khách_có", shape=rect, style=filled];
 0 -> "-1"  [class="", key=NONE, label=""];
-0 -> 6  [class="", key=0];
-0 -> 7  [class=active, key=0];
-1 -> "-5"  [class="", key=NONE, label=""];
-4 -> 5  [class=active, key=NONE, label=""];
-6 -> 1  [class="", key=0];
-7 -> 4  [class=active, key=0];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 8  [class=active, key=0];
+2 -> 9  [class=active, key=0];
+3 -> 4  [class=active, key=NONE, label=""];
+4 -> 10  [class=active, key=0];
+5 -> 6  [class=active, key=NONE, label=""];
+6 -> 7  [class=active, key=NONE, label=""];
+8 -> 2  [class=active, key=0];
+9 -> 3  [class=active, key=0];
+10 -> 5  [class=active, key=0];
 }

@@ -2,12 +2,9 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: khách chọn nhầm
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: khách_nhầm
+  - action: utter_chào_có_entity
+  - action: utter_hỏi_danh_mục_sản_phẩm
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot

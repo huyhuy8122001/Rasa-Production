@@ -1,67 +1,84 @@
-version: "3.1"
+version: '3.1'
 intents:
-  - affirm
-  - bot_challenge
-  - deny
-  - goodbye
-  - greet
-  - mood_great
-  - mood_unhappy
-  - khách_bắt_đầu
-  - khách_đưa_tên
-  - sp_tổng_đài
-  - khách_chọn_gói_Pro
-  - khách_chọn_gói_Business
-  - khách_chọn_gói_Custom
-  
+- gateway
+- khách_bắt_đầu
+- khách_chọn_gói_Business
+- khách_chọn_gói_Custom
+- khách_chọn_gói_Pro
+- khách_có
+- khách_không
+- khách_nhầm
+- khách_đưa_tên
+- sp_thiết_bị
+- sp_tổng_đài
+- sp_đầu_số
+- tai_nghe
+- điện_thoại
+- đầu_số_1000
+- đầu_số_1001
+- đầu_số_1002
 responses:
-  utter_greet:
-    - text: Hey! How are you?
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: https://i.imgur.com/nGF1K8f.jpg
-  utter_did_that_help:
-    - text: Did that help you?
-  utter_happy:
-    - text: Great, carry on!
-  utter_goodbye:
-    - text: Bye
-  utter_iamabot:
-    - text: I am a bot, powered by Rasa.
   utter_chào:
-    - text: Chào quý khách! Em có thể xưng hô quý khách như thế nào được ạ?
+  - text: Chào quý khách! Em là trợ lý số của công ty, em có thể biết tên quý khách được không ạ?
   utter_chào_có_entity:
-    - text: Dạ vâng {pronoun} {name}.
+  - text: Dạ vâng {pronoun} {name}.
   utter_hỏi_danh_mục_sản_phẩm:
-    - text: Không biết {pronoun} muốn tìm hiểu về sản phẩm nào bên em ạ? Chúng em cung cấp các sản phẩm Đầu số, Tổng đài và Thiết bị.
+  - text: Không biết {pronoun} muốn tìm hiểu về sản phẩm nào bên em ạ? Chúng em cung cấp các sản phẩm về Đầu số, Tổng đài và Thiết bị.
+  utter_cung_cấp_thông_tin_thiết_bị:
+  - text: Dạ thiết bị bên em gồm có điện thoại Grandstream GRP2601/GRP2601P, tai nghe DQN HS212 và gateway Yeastar TA1610 ạ. {pronoun} muốn tìm thiết bị nào ạ?
+  utter_điện_thoại:
+  - text: Mời {pronoun} tham khảo điện thoại Grandstream GRP2601/GRP2601P tại đường link này <https://shop.dqn.vn/en/grandstream-grp2601-grp2601p-essential-2-line-ip-phone.html>
+  utter_tai_nghe:
+  - text: Mời {pronoun} tham khảo tai nghe DQN HS212 tại đường link này <https://shop.dqn.vn/vn/tai-nghe-dqn-hs212.html>
+  utter_gateway:
+  - text: Mời {pronoun} tham khảo gateway Yeastar TA1610 tại đường link này <https://shop.dqn.vn/en/yeastar-ta1610-voip-fxo-gateway.html>
+  utter_cung_cấp_thông_tin_đầu_số:
+  - text: Dạ bên em hiện có đầu số 1000, đầu số 1001 và đầu số 1002 ạ. {pronoun} muốn đăng ký đầu số nào ạ?
+  utter_đầu_1000:
+  - text: Dạ đầu số 1000 hiện đang có giá là 1000$
+  utter_đầu_1001:
+  - text: Dạ đầu số 1001 hiện đang có giá là 2000$
+  utter_đầu_1002:
+  - text: Dạ đầu số 1002 hiện đang có giá là 3000$
   utter_cung_cấp_thông_tin_tổng_đài:
-    - text: Dạ tổng đài bên em hiện có 3 gói dịch vụ chính. Bao gồm gói Pro, gói Business và gói Custom. {pronoun} muốn đăng ký gói nào ạ?
+  - text: Dạ tổng đài bên em hiện có 3 gói dịch vụ chính. Bao gồm gói Pro, gói Business và gói Custom. {pronoun} muốn đăng ký gói nào ạ?
   utter_gói_Pro:
-    - text: Gói Pro bao gồm bla bla
+  - text: Gói Pro bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
   utter_gói_Business:
-    - text: Gói Business bao gồm bla bla
+  - text: Gói Business bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
   utter_gói_Custom:
-    - text: Gói Custom bao gồm bla bla
-
+  - text: Gói Custom bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
+  utter_xác_nhận_đăng_ký:
+  - text: Dạ {pronoun} có muốn đăng ký không ạ?
+  utter_đợi_em_chút:
+  - text: Dạ {pronoun} đợi em chút. Để em kết nối tới tổng đài viên để thực hiện việc đăng ký nha
+  utter_chuyển_tới_agent:
+  - text: Đang kết nối tới tổng đài viên...
+  utter_tạm_biệt:
+  - text: Xin kính chào tạm biệt {pronoun} {name}
 entities:
-  - pronoun
-  - name
-
+- pronoun
+- name
 slots:
   pronoun:
     type: text
     influence_conversation: false
     initial_value: anh
     mappings:
-      - type: from_entity
-        entity: pronoun
+    - type: from_entity
+      entity: pronoun
   name:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_entity
-        entity: name
-
+    - type: from_entity
+      entity: name
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- utter_chuyển_tới_agent
+- utter_cung_cấp_thông_tin_đầu_số
+- utter_xác_nhận_đăng_ký
+- utter_đầu_1000
+- utter_đợi_em_chút

@@ -1,134 +1,203 @@
 version: "3.1"
 nlu:
-  - intent: greet
-    examples: |
-      - hey
-      - hello
-      - hi
-      - hello there
-      - good morning
-      - good evening
-      - moin
-      - hey there
-      - let's go
-      - hey dude
-      - goodmorning
-      - goodevening
-      - good afternoon
-      - chào
-  - intent: goodbye
-    examples: |
-      - cu
-      - good by
-      - cee you later
-      - good night
-      - bye
-      - goodbye
-      - have a nice day
-      - see you around
-      - bye bye
-      - see you later
-  - intent: affirm
-    examples: |
-      - yes
-      - y
-      - indeed
-      - of course
-      - that sounds good
-      - correct
-  - intent: deny
-    examples: |
-      - no
-      - n
-      - never
-      - I don't think so
-      - don't like that
-      - no way
-      - not really
-      - tôi tên là Cường
-  - intent: mood_great
-    examples: |
-      - perfect
-      - great
-      - amazing
-      - feeling like a king
-      - wonderful
-      - I am feeling very good
-      - I am great
-      - I am amazing
-      - I am going to save the world
-      - super stoked
-      - extremely good
-      - so so perfect
-      - so good
-      - so perfect
-  - intent: mood_unhappy
-    examples: |
-      - my day was horrible
-      - I am sad
-      - I don't feel very well
-      - I am disappointed
-      - super sad
-      - I'm so sad
-      - sad
-      - very sad
-      - unhappy
-      - not good
-      - not very good
-      - extremly sad
-      - so saad
-      - so sad
-  - intent: bot_challenge
-    examples: |
-      - are you a bot?
-      - are you a human?
-      - am I talking to a bot?
-      - am I talking to a human?
-  - intent: khách_bắt_đầu
-    examples: |
-      - Chào
-      - Xin chào
-      - hi
-      - hello
-      - chào bạn
-  - intent: khách_đưa_tên
-    examples: |
-      - tôi tên là [Cường]{"entity": "name"}
-      - [anh]{"entity": "pronoun"} tên [Huy]{"entity": "name"}
-      - [chị]{"entity": "pronoun"} [Nhi]{"entity": "name"} nha em
-      - gọi [anh]{"entity": "pronoun"} [Đạt]{"entity": "name"} đi
-      - [Duy]{"entity": "name"}
-      - [sếp]{"entity": "pronoun"} [Toán]{"entity": "name"}
-      - [anh]{"entity": "pronoun"} [Toán]{"entity": "name"}
-  - intent: sp_tổng_đài
-    examples: |
-      - sản phẩm tổng đài
-      - tổng đài
-      - tổng đài đi em
-      - [anh]{"entity": "pronoun"} muốn tìm hiểu về tổng đài
-      - cho [anh]{"entity": "pronoun"} biết thêm về tổng đài
-      - [anh]{"entity": "pronoun"} cần tổng 
-  - intent: khách_chọn_gói_Pro
-    examples: |
-      - gói Pro
-      - chọn gói Pro
-      - Pro
-      - pro
-      - tổng đài Pro
-      - tổng đài gói pro
-  - intent: khách_chọn_gói_Business
-    examples: |
-      - gói Business
-      - chọn gói Business
-      - Business
-      - business
-      - tổng đài Business
-      - tổng đài gói business
-  - intent: khách_chọn_gói_Custom
-    examples: |
-      - gói Custom
-      - chọn gói Custom
-      - Custom
-      - custom
-      - tổng đài Custom
-      - tổng đài gói custom
+- intent: khách_bắt_đầu
+  examples: |
+    - Chào
+    - Xin chào
+    - hi
+    - hello
+    - chào bạn
+- intent: khách_đưa_tên
+  examples: |
+    - tôi tên là [Cường](name)
+    - [anh](pronoun) tên [Huy](name)
+    - [chị](pronoun) [Nhi](name) nha em
+    - gọi [anh](pronoun) [Đạt](name) đi
+    - [Duy](name)
+    - [sếp](pronoun) [Toán](name)
+    - [anh](pronoun) [Toán](name)
+- intent: sp_thiết_bị
+  examples: |
+    - danh mục thiết bị
+    - cho tôi xem thông tin thiết bị
+    - cho tôi thông tin về thiết bị
+    - thiết bị
+    - thông tin thiết bị
+    - thiết bị chung
+    - bên mình có những thiết bị nào
+    - thiết bị gì
+    - thiết bị nào
+    - công ty bán thiết bị gì
+    - bán thiết bị nào
+    - có bán thiết bị nào không
+- intent: điện_thoại
+  examples: |
+    - điện thoại
+    - điện thoại ip
+    - tôi muốn xem điện thoại
+    - cho tôi xem điện thoại
+    - vậy cho tôi coi điện thoại đi
+    - điện thoại bên mình cung cấp những loại nào
+    - [anh](pronoun) cần tìm hiểu về điện thoại
+    - [chị](pronoun) muốn biết thêm về điện thoại
+    - Grandstream GRP2601/GRP2601P
+    - Grandstream
+    - GRP2601/GRP2601P
+- intent: tai_nghe
+  examples: |
+    - tai nghe
+    - tôi muốn xem tai nghe
+    - cho tôi xem tai nghe
+    - tai nghe có những loại nào
+    - tai nghe bên mình cung cấp những loại nào
+    - [anh](pronoun) cần tìm hiểu về tai nghe
+    - [chị](pronoun) muốn biết thêm về tai nghe
+    - DQN HS212
+    - HS212
+    - DQN
+- intent: gateway
+  examples: |
+    - gateway
+    - tôi muốn xem gateway
+    - cho tôi xem gateway
+    - gateway có những loại nào
+    - gateway bên mình cung cấp những loại nào
+    - [anh](pronoun) cần tìm hiểu về gateway
+    - [chị](pronoun) muốn biết thêm về gateway
+    - Yeastar TA1610
+    - TA1610
+    - Yeastar
+- intent: sp_đầu_số
+  examples: |
+    - danh mục đầu số
+    - đầu số
+    - cho tôi xem các loại đầu số
+    - đầu số đẹp
+    - các loại đầu số
+    - những loại đầu số
+    - số của công ty mình cung cấp những đầu nào
+    - công ty có những đầu số gì
+    - đầu số gì
+    - đầu số nào
+
+- intent: đầu_số_1000
+  examples: |
+    - chị thích đầu số một nghìn
+    - 1000
+    - đầu 1000
+    - đầu số 1000
+    - đầu số đẹp 1000
+    - số 1000
+    - đăng ký đầu 1000
+    - đăng ký 1000
+    - đăng ký đầu số 1000
+    - chọn đầu số 1000
+    - chọn đầu 1000
+    - [anh](pronoun) cần đăng ký đầu số 1000
+    - [chị](pronoun) muốn đăng ký đầu 1000
+    - 1000 đi
+    - đầu 1000 đi
+    - đầu số 1000 đi
+    - 1000 nha
+    - đầu 1000 nha
+    - đầu số 1000 nha
+
+- intent: đầu_số_1001
+  examples: |
+    - 1001
+    - đầu 1001
+    - đầu số 1001
+    - đầu số đẹp 1001
+    - số 1001
+    - đăng ký đầu 1001
+    - đăng ký 1001
+    - đăng ký đầu số 1001
+    - chọn đầu số 1001
+    - chọn đầu 1001
+    - [anh](pronoun) cần đăng ký đầu số 1001
+    - [chị](pronoun) muốn đăng ký đầu 1001
+    - 1001 đi
+    - đầu 1001 đi
+    - đầu số 1001 đi
+    - 1001 nha
+    - đầu 1001 nha
+    - đầu số 1001 nha
+- intent: đầu_số_1002
+  examples: |
+    - 1002
+    - đầu 1002
+    - đầu số 1002
+    - đầu số đẹp 1002
+    - số 1002
+    - đăng ký đầu 1002
+    - đăng ký 1002
+    - đăng ký đầu số 1002
+    - chọn đầu số 1002
+    - chọn đầu 1002
+    - [anh](pronoun) cần đăng ký đầu số 1002
+    - [chị](pronoun) muốn đăng ký đầu 1002
+    - 1002 đi
+    - đầu 1002 đi
+    - đầu số 1002 đi
+    - 1002 nha
+    - đầu 1002 nha
+    - đầu số 1002 nha
+- intent: sp_tổng_đài
+  examples: |
+    - sản phẩm tổng đài
+    - tổng đài
+    - tổng đài đi em
+    - [anh](pronoun) muốn tìm hiểu về tổng đài
+    - cho [anh](pronoun) biết thêm về tổng đài
+    - [anh](pronoun) cần tổng đài
+- intent: khách_chọn_gói_Pro
+  examples: |
+    - gói Pro
+    - chọn gói Pro
+    - Pro
+    - pro
+    - tổng đài Pro
+    - tổng đài gói pro
+- intent: khách_chọn_gói_Business
+  examples: |
+    - gói Business
+    - chọn gói Business
+    - Business
+    - business
+    - tổng đài Business
+    - tổng đài gói business
+- intent: khách_chọn_gói_Custom
+  examples: |
+    - gói Custom
+    - chọn gói Custom
+    - Custom
+    - custom
+    - tổng đài Custom
+    - tổng đài gói
+- intent: khách_có
+  examples: |
+    - có
+    - đồng ý
+    - yes
+    - đúng vậy
+    - có đăng ký
+- intent: khách_không
+  examples: |
+    - không
+    - không có
+    - no
+    - không đăng ký
+- intent: khách_nhầm
+  examples: |
+    - không phải nhầm rồi
+    - nhầm
+    - chọn nhầm
+    - nhầm rồi
+    - [anh](pronoun) chọn nhầm
+    - [chị](pronoun) chọn nhầm
+    - cho chọn lại
+    - cho [anh](pronoun) chọn lại
+    - cho [chị](pronoun) chọn lại
+    - chọn lại
+    - lại
+    - [anh](pronoun) chọn lại cái
