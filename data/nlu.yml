@@ -90,8 +90,57 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+# assign agent 
+
+# - intent: chat_with_agent
+#   examples: |
+#     - cho toi gap agent
+#     - toi muon noi chuyen voi agent
+#     - agent dau, ra day noi chuyen voi toi  
+
 - intent: chat_with_agent
   examples: |
     - cho toi gap agent
     - toi muon noi chuyen voi agent
-    - agent dau, ra day noi chuyen voi toi  
+    - agent dau, ra day noi chuyen voi toi
+    - cho toi gap [cuong](agent)
+    - toi muon noi chuyen voi [cuong](agent)
+    - [cuong](agent) dau, ra day noi chuyen voi toi
+- lookup: agent
+  examples: |
+    - cuong
+    - Cuong
+    - huy
+    - dung
+    - toan
+    - dat
+
+- intent: chat_with_specific_agent
+  examples: |
+    - cho tôi gặp Đạt
+    - tôi muốn gặp Đạt
+
+## device
+- intent: device_info
+  examples: |
+    - cho tôi xem thông tin thiết bị
+    - danh mục thiết bị
+    - cho tôi thông tin về thiết bị
+
+- intent: phone_info
+  examples: |
+    - điện thoại ip
+    - tôi muốn xem điện thoại
+    - cho tôi xem điện thoại 
+
+- intent: headset_info
+  examples: |
+    - tai nghe
+    - tôi muốn xem tai nghe
+    - cho tôi xem tai nghe
+
+- intent: gateways_info
+  examples: |
+    - gateways
+    - tôi muốn xem gateways
+    - cho tôi xem gateways

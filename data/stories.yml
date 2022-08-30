@@ -35,3 +35,38 @@ stories:
   - action: utter_greet
   - intent: chat_with_agent
   - action: utter_upper_status
+
+# - story: path redirect to specific agent
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: chat_with_specific_agent
+#   - action: utter_assign_to_specific_agent
+
+- story: path phone device
+  steps:
+  - intent: device_info
+  - action: utter_ask_customer
+  - intent: phone_info
+  - action: utter_phone
+
+- story: path headset device
+  steps:
+  - intent: device_info
+  - action: utter_ask_customer
+  - intent: headset_info
+  - action: utter_headset
+
+- story: path gateways device
+  steps:
+  - intent: device_info
+  - action: utter_ask_customer
+  - intent: gateways_info
+  - action: utter_gateways
+
+# - story: path about list agent
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: chat_with_agent
+#   - action: action_get_list_agent

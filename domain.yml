@@ -9,6 +9,14 @@ intents:
   - mood_unhappy
   - bot_challenge
   - chat_with_agent
+  - chat_with_specific_agent
+
+  # thiet bi
+  - device_info
+  - phone_info
+  - headset_info
+  - gateways_info
+  
 
 responses:
   utter_greet:
@@ -32,6 +40,22 @@ responses:
 
   utter_upper_status:
   - text: "Đang kết nối đến tổng đài viên ..."
+
+  utter_assign_to_specific_agent:
+  - text: "Đang chuyển đến Đạt ..."
+
+  utter_ask_customer:
+  - text: "Anh/chị muốn tìm hiểu về sản phẩm nào?"
+
+  utter_phone:
+  - text: "https://shop.dqn.vn/en/grandstream-grp2601-grp2601p-essential-2-line-ip-phone.html"
+
+  utter_headset:
+  - text: "https://shop.dqn.vn/vn/tai-nghe-dqn-hs212.html"
+
+  utter_gateways:
+  - text: "https://shop.dqn.vn/en/yeastar-ta1610-voip-fxo-gateway.html"
+
 
 session_config:
   session_expiration_time: 60
