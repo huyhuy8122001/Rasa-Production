@@ -1,9 +1,47 @@
 version: "3.1"
 
 rules:
+- rule: chào hỏi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+# - rule: khách cung cấp tên
+#   steps:
+#   - intent: give_name
+#   - action: utter_menu
 
 - rule: khách chọn nhầm
   steps:
-  - intent: khách_nhầm
-  - action: utter_hỏi_danh_mục_sản_phẩm
+  - intent: choose_wrong
+  - action: utter_choose_again
 
+- rule: khách cảm ơn
+  steps:
+  - intent: thankyou
+  - action: utter_thankyou
+
+- rule: khách hỏi menu
+  steps:
+  - intent: ask_menu
+  - action: utter_menu
+
+- rule: khách giận dữ
+  steps:
+  - intent: angry
+  - action: utter_sorry
+
+- rule: khách hỏi có biết tên khách không
+  steps: 
+  - intent: ask_own_name
+  - action: utter_ask_name
+
+- rule: khách hỏi tên bot
+  steps: 
+  - intent: ask_bot_name
+  - action: utter_bot_name
+
+- rule: test
+  steps: 
+  - intent: give_name
+  - action: action_test

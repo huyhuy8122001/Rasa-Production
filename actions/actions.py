@@ -25,16 +25,16 @@ class ActionTest(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        with open('data.json', 'r', encoding='utf-8') as db:
-            data = json.load(db)
+        # with open('data.json', 'r', encoding='utf-8') as db:
+        #     data = json.load(db)
 
         entityValue = next(tracker.get_latest_entity_values(
-            entity_type="danhmucsanpham"), None)
+            entity_type="name"), None)
 
         print(entityValue)
 
-        dauso = get_dau_so(data, entityValue)
+        # dauso = get_dau_so(data, entityValue)
 
-        print(dauso)
+        # print(dauso)
 
-        return [SlotSet("name", "Huy")]
+        return []

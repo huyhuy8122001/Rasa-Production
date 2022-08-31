@@ -1,12 +1,174 @@
 version: "3.1"
 
 stories:
-- story: chào hỏi
+# Chọn dịch vụ Thiết bị
+- story: khách chọn dịch vụ Thiết bị
+  steps: 
+  - intent: device
+  - action: utter_device
+
+# Webcam
+- story: tìm hiểu webcam - happy
   steps:
-  - intent: khách_bắt_đầu
-  - action: utter_chào
-  - intent: khách_đưa_tên
-  - action: utter_hỏi_danh_mục_sản_phẩm
+  - intent: webcam
+  - action: utter_webcam
+  - intent: affirm_handover
+  - action: utter_handover
+
+- story: tìm hiểu webcam - sad
+  steps:
+  - intent: webcam
+  - action: utter_webcam
+  - intent: deny_handover
+  - action: utter_ask_for_more
+
+# Điện thoại
+- story: tìm hiểu điện thoại - happy
+  steps:
+  - intent: phone
+  - action: utter_phone
+  - intent: affirm_handover
+  - action: utter_handover
+
+- story: tìm hiểu điện thoại - sad
+  steps:
+  - intent: phone
+  - action: utter_phone
+  - intent: deny_handover
+  - action: utter_ask_for_more
+
+# Tai nghe
+- story: tìm hiểu Tai nghe - happy
+  steps:
+  - intent: headphone
+  - action: utter_headphone
+  - intent: affirm_handover
+  - action: utter_handover
+
+- story: tìm hiểu Tai nghe - sad
+  steps:
+  - intent: headphone
+  - action: utter_headphone
+  - intent: deny_handover
+  - action: utter_ask_for_more
+
+
+# - story: tìm hiểu thiết bị điện thoại - happy
+#   steps:
+#   - intent: sp_thiết_bị
+#   - action: utter_cung_cấp_thông_tin_thiết_bị
+#   - intent: phone
+#   - action: utter_phone
+#   - intent: khách_có
+#   - action: utter_chuyển_tới_agent
+
+# - story: tìm hiểu thiết bị điện thoại - sad
+#   steps:
+#   - intent: sp_thiết_bị
+#   - action: utter_cung_cấp_thông_tin_thiết_bị
+#   - intent: phone
+#   - action: utter_phone
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
+
+# - story: tìm hiểu thiết bị tai nghe - happy
+#   steps:
+#   - intent: sp_thiết_bị
+#   - action: utter_cung_cấp_thông_tin_thiết_bị
+#   - intent: headphone
+#   - action: utter_headphone
+#   - intent: khách_có
+#   - action: utter_chuyển_tới_agent
+
+# - story: tìm hiểu thiết bị tai nghe - sad
+#   steps:
+#   - intent: sp_thiết_bị
+#   - action: utter_cung_cấp_thông_tin_thiết_bị
+#   - intent: headphone
+#   - action: utter_headphone
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
+
+# - story: tìm hiểu thiết bị webcam - happy
+#   steps:
+#   - intent: sp_thiết_bị
+#   - action: utter_cung_cấp_thông_tin_thiết_bị
+#   - intent: khách_chọn_webcam
+#   - action: utter_webcam
+#   - intent: khách_có
+#   - action: utter_chuyển_tới_agent
+
+# - story: tìm hiểu thiết bị webcam - sad
+#   steps:
+#   - intent: sp_thiết_bị
+#   - action: utter_cung_cấp_thông_tin_thiết_bị
+#   - intent: khách_chọn_webcam
+#   - action: utter_webcam
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
+
+# - story: tìm hiểu tổng đài Pro - happy
+#   steps:
+#   - intent: sp_tổng_đài
+#   - action: utter_cung_cấp_thông_tin_tổng_đài
+#   - intent: khách_chọn_gói_Pro
+#   - action: utter_gói_Pro
+  
+#   - intent: khách_có
+  
+#   - action: utter_chuyển_tới_agent
+
+# - story: tìm hiểu tổng đài Pro - sad
+#   steps:
+#   - intent: sp_tổng_đài
+#   - action: utter_cung_cấp_thông_tin_tổng_đài
+#   - intent: khách_chọn_gói_Pro
+#   - action: utter_gói_Pro
+  
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
+
+# - story: tìm hiểu tổng đài Business - happy
+#   steps:
+#   - intent: sp_tổng_đài
+#   - action: utter_cung_cấp_thông_tin_tổng_đài
+#   - intent: khách_chọn_gói_Business
+#   - action: utter_gói_Business
+  
+#   - intent: khách_có
+  
+#   - action: utter_chuyển_tới_agent
+
+# - story: tìm hiểu tổng đài Business - sad
+#   steps:
+#   - intent: sp_tổng_đài
+#   - action: utter_cung_cấp_thông_tin_tổng_đài
+#   - intent: khách_chọn_gói_Business
+#   - action: utter_gói_Business
+  
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
+
+# - story: tìm hiểu tổng đài Custom - happy
+#   steps:
+#   - intent: sp_tổng_đài
+#   - action: utter_cung_cấp_thông_tin_tổng_đài
+#   - intent: khách_chọn_gói_Custom
+#   - action: utter_gói_Custom
+  
+#   - intent: khách_có
+  
+#   - action: utter_chuyển_tới_agent
+
+# - story: tìm hiểu tổng đài Custom - sad
+#   steps:
+#   - intent: sp_tổng_đài
+#   - action: utter_cung_cấp_thông_tin_tổng_đài
+#   - intent: khách_chọn_gói_Custom
+#   - action: utter_gói_Custom
+  
+#   - intent: khách_không
+#   - action: utter_tạm_biệt
 
 # - story: tìm hiểu đầu số 1000 - happy
 #   steps:
@@ -70,122 +232,4 @@ stories:
 #   
 #   - intent: khách_không
 #   - action: utter_tạm_biệt
-
-- story: tìm hiểu thiết bị điện thoại - happy
-  steps:
-  - intent: sp_thiết_bị
-  - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: phone
-  - action: utter_phone
-  - intent: khách_có
-  - action: utter_chuyển_tới_agent
-
-- story: tìm hiểu thiết bị điện thoại - sad
-  steps:
-  - intent: sp_thiết_bị
-  - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: phone
-  - action: utter_phone
-  - intent: khách_không
-  - action: utter_tạm_biệt
-
-- story: tìm hiểu thiết bị tai nghe - happy
-  steps:
-  - intent: sp_thiết_bị
-  - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: headphone
-  - action: utter_headphone
-  - intent: khách_có
-  - action: utter_chuyển_tới_agent
-
-- story: tìm hiểu thiết bị tai nghe - sad
-  steps:
-  - intent: sp_thiết_bị
-  - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: headphone
-  - action: utter_headphone
-  - intent: khách_không
-  - action: utter_tạm_biệt
-
-- story: tìm hiểu thiết bị webcam - happy
-  steps:
-  - intent: sp_thiết_bị
-  - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: webcam
-  - action: utter_webcam
-  - intent: khách_có
-  - action: utter_chuyển_tới_agent
-
-- story: tìm hiểu thiết bị webcam - sad
-  steps:
-  - intent: sp_thiết_bị
-  - action: utter_cung_cấp_thông_tin_thiết_bị
-  - intent: webcam
-  - action: utter_webcam
-  - intent: khách_không
-  - action: utter_tạm_biệt
-
-- story: tìm hiểu tổng đài Pro - happy
-  steps:
-  - intent: sp_tổng_đài
-  - action: utter_cung_cấp_thông_tin_tổng_đài
-  - intent: khách_chọn_gói_Pro
-  - action: utter_gói_Pro
-  
-  - intent: khách_có
-  
-  - action: utter_chuyển_tới_agent
-
-- story: tìm hiểu tổng đài Pro - sad
-  steps:
-  - intent: sp_tổng_đài
-  - action: utter_cung_cấp_thông_tin_tổng_đài
-  - intent: khách_chọn_gói_Pro
-  - action: utter_gói_Pro
-  
-  - intent: khách_không
-  - action: utter_tạm_biệt
-
-- story: tìm hiểu tổng đài Business - happy
-  steps:
-  - intent: sp_tổng_đài
-  - action: utter_cung_cấp_thông_tin_tổng_đài
-  - intent: khách_chọn_gói_Business
-  - action: utter_gói_Business
-  
-  - intent: khách_có
-  
-  - action: utter_chuyển_tới_agent
-
-- story: tìm hiểu tổng đài Business - sad
-  steps:
-  - intent: sp_tổng_đài
-  - action: utter_cung_cấp_thông_tin_tổng_đài
-  - intent: khách_chọn_gói_Business
-  - action: utter_gói_Business
-  
-  - intent: khách_không
-  - action: utter_tạm_biệt
-
-- story: tìm hiểu tổng đài Custom - happy
-  steps:
-  - intent: sp_tổng_đài
-  - action: utter_cung_cấp_thông_tin_tổng_đài
-  - intent: khách_chọn_gói_Custom
-  - action: utter_gói_Custom
-  
-  - intent: khách_có
-  
-  - action: utter_chuyển_tới_agent
-
-- story: tìm hiểu tổng đài Custom - sad
-  steps:
-  - intent: sp_tổng_đài
-  - action: utter_cung_cấp_thông_tin_tổng_đài
-  - intent: khách_chọn_gói_Custom
-  - action: utter_gói_Custom
-  
-  - intent: khách_không
-  - action: utter_tạm_biệt
-
 

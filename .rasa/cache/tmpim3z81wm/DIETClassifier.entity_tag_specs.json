@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-danhmucsanpham",
+      "2": "I-danhmucsanpham",
+      "3": "L-danhmucsanpham",
+      "4": "U-danhmucsanpham",
+      "5": "B-name",
+      "6": "I-name",
+      "7": "L-name",
+      "8": "U-name",
+      "9": "B-pronoun",
+      "10": "I-pronoun",
+      "11": "L-pronoun",
+      "12": "U-pronoun",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-danhmucsanpham": 1,
+      "I-danhmucsanpham": 2,
+      "L-danhmucsanpham": 3,
+      "U-danhmucsanpham": 4,
+      "B-name": 5,
+      "I-name": 6,
+      "L-name": 7,
+      "U-name": 8,
+      "B-pronoun": 9,
+      "I-pronoun": 10,
+      "L-pronoun": 11,
+      "U-pronoun": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

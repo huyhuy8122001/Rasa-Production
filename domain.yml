@@ -1,85 +1,147 @@
 version: "3.1"
 intents:
+  - greet
+  - give_name
   - webcam
-  - khách_bắt_đầu
-  - khách_chọn_gói_Business
-  - khách_chọn_gói_Custom
-  - khách_chọn_gói_Pro
-  - khách_có
-  - khách_không
-  - khách_nhầm
-  - khách_đưa_tên
-  - sp_thiết_bị
-  - sp_tổng_đài
-  - sp_đầu_số
-  - headphone
   - phone
-  - đầu_số_1000
-  - đầu_số_1001
-  - đầu_số_1002
+  - device
+  - headphone
+  - affirm_handover
+  - deny_handover
+  - thankyou
+  - ask_menu
+  - choose_wrong
+  - angry
+  - ask_own_name
+  - ask_bot_name
 
 responses:
-  utter_chào:
-    - text: Chào quý khách! Em là trợ lý số của công ty, em có thể biết tên quý khách được không ạ?
+  utter_greet:
+  - condition:
+    - type: slot
+      name: name
+      value: ạ
+    text: "Chào quý khách! Em là trợ lý số của công ty. Em có thể biết tên của quý khách được không ạ?"
+  - text: "Chào {pronoun} {name}! Em là trợ lý số của công ty.
+  \nEm rất vui khi được hỗ trợ và giải đáp những thắc mắc của {pronoun}.
+  \nHiện bên em đang cung cấp các dịch vụ về:
+  \n  + Đầu số
+  \n  + Tổng đài
+  \n  + Thiết bị
+  \nKhông biết {pronoun} muốn tìm hiểu về dịch vụ nào?"
   
-  utter_chào_có_entity:
-    - text: Dạ vâng {pronoun} {name}.
- 
-  utter_hỏi_danh_mục_sản_phẩm:
-    - text: Dạ vâng {pronoun} {name}. Chúng em cung cấp các dịch vụ về Đầu số, Tổng đài và Thiết bị. Không biết {pronoun} muốn tìm hiểu về dịch vụ nào?
-  
-  utter_cung_cấp_thông_tin_thiết_bị:
-    - text: "Hiện bên em đang có một số thiết bị nổi bật như:\n+ Tai nghe DQN HU810\n+ Webcam DQN C620\n+ Điện thoại DQN N1\n{pronoun} có hứng thú với 
-    sản phẩm nào không?"
+  utter_menu:
+  - text: "Không biết {pronoun} {name} muốn tìm hiểu về dịch vụ nào nhỉ? Bên em hiện đang cung cấp các dịch vụ về Đầu số, Tổng đài và Thiết bị ạ."
 
-  utter_phone:
-    - text: "Về điện thoại IP phổ thông DQN N1 của bên em cung cấp sẽ mang đến chất lượng âm thanh HD vượt trội, cùng màn hình 132*48px 
-    đèn nền tiện lợi.\nĐây là một sự lựa chọn hoàn hảo cho doanh nghiệp của {pronoun} nếu như {pronoun} đang tìm kiếm một điện thoại IP chất lượng 
-    cao, cùng nhiều tính năng với chi phí hợp lý.\nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin 
-    chi tiết sản phẩm\nHoặc {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/dien-thoai-ip-pho-thong-dqn-n1/>"
-  
-  utter_headphone:
-    - text: "Với tai nghe tổng đài DQN HU810 có tích hợp công nghệ AI loại bỏ 99% tiếng ồn, cuộc gọi của {pronoun} sẽ không còn bị ảnh hưởng bởi môi 
-    trường ồn ào xung quanh nữa.\nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin chi tiết sản 
-    phẩm\nHoặc {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/tai-nghe-tong-dai-dqn-hu810/>"
+  utter_device:
+    - text: "Hiện bên em đang có một số thiết bị nổi bật như:
+    \n  + Tai nghe DQN HU810
+    \n  + Webcam DQN C620
+    \n  + Điện thoại DQN N1
+    \n{pronoun} có hứng thú với sản phẩm nào không?"
   
   utter_webcam:
-    - text: "Với thiết kế nhỏ gọn, Webcam Full HD 1080p C620 có thể lắp đặt ở bất cứ đâu và là sự lựa chọn lý tưởng cho hoạt động cộng tác cá nhân 
-    của {pronoun}.\nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin chi tiết sản phẩm\nHoặc 
-    {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/webcam-hop-truc-tuyen-dqn-c620-full-hd/>"
-  
-  utter_cung_cấp_thông_tin_đầu_số:
-    - text: Dạ bên em hiện có đầu số 1000, đầu số 1001 và đầu số 1002 ạ. {pronoun} muốn đăng ký đầu số nào ạ?
-  
-  utter_đầu_1000:
-    - text: Dạ đầu số 1000 hiện đang có giá là 1000$
- 
-  utter_đầu_1001:
-    - text: Dạ đầu số 1001 hiện đang có giá là 2000$
-  
-  utter_đầu_1002:
-    - text: Dạ đầu số 1002 hiện đang có giá là 3000$
- 
-  utter_cung_cấp_thông_tin_tổng_đài:
-    - text: Dạ tổng đài bên em hiện có 3 gói dịch vụ chính. Bao gồm gói Pro, gói Business và gói Custom. {pronoun} muốn đăng ký gói nào ạ?
-  
-  utter_gói_Pro:
-    - text: Gói Pro bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
-  
-  utter_gói_Business:
-    - text: Gói Business bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
-  
-  utter_gói_Custom:
-    - text: Gói Custom bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
-  
-  utter_chuyển_tới_agent:
-    - text: "Dạ đợi em chút. Để em kết nối tới bộ phận bán hàng giúp {pronoun} nhá.\nĐang kết nối..."
- 
-  utter_tìm_hiểu_thêm:
+    - text: "Với thiết kế nhỏ gọn, Webcam Full HD 1080p C620 có thể lắp đặt ở bất cứ đâu và là sự lựa chọn lý tưởng cho hoạt động cộng tác cá nhân của {pronoun}.
+    \nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin chi tiết sản phẩm
+    \nHoặc {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/webcam-hop-truc-tuyen-dqn-c620-full-hd/>"
+
+  utter_phone:
+    - text: "Về điện thoại IP phổ thông DQN N1 của bên em cung cấp sẽ mang đến chất lượng âm thanh HD vượt trội, cùng màn hình 132*48px đèn nền tiện lợi.
+    \nĐây là một sự lựa chọn hoàn hảo cho doanh nghiệp của {pronoun} nếu như {pronoun} đang tìm kiếm một điện thoại IP chất lượng cao, cùng nhiều tính năng với chi phí hợp lý.
+    \nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin chi tiết sản phẩm
+    \nHoặc {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/dien-thoai-ip-pho-thong-dqn-n1/>"
+
+  utter_headphone:
+    - text: "Với tai nghe tổng đài DQN HU810 có tích hợp công nghệ AI loại bỏ 99% tiếng ồn, cuộc gọi của {pronoun} sẽ không còn bị ảnh hưởng bởi môi trường ồn ào xung quanh nữa.
+    \nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin chi tiết sản phẩm
+    \nHoặc {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/tai-nghe-tong-dai-dqn-hu810/>"
+
+  utter_handover:
+    - text: "Dạ đợi em chút. Để em kết nối tới bộ phận bán hàng giúp {pronoun} nhá.
+    \nĐang kết nối..."
+
+  utter_ask_for_more:
     - text: "Dạ {pronoun}. Vậy {pronoun} có muốn biết thêm về sản phẩm nào nữa không ạ?"
+
+  utter_thankyou:
+    - text: "Dạ không có gì ạ. Đây là việc của em mà"
+    - text: "Em cũng cảm ơn {pronoun} vì đã quan tâm tới công ty ạ"
+    - text: "Hihi {pronoun} khách sáo quá. Đây là việc em phải làm thôi mà"
+
+  utter_choose_again:
+    - text: "Dạ vâng, {pronoun} chọn lại đi ạ"
+
+  utter_sorry:
+    - text: "Dạ em xin lỗi, em còn nhiều thiếu sót mong {pronoun} bỏ qua.
+    \nNếu được mong {pronoun} có thể trình bày lại kĩ hơn những gì {pronoun} muốn nói được không ạ :("
+
+  utter_ask_name:
+  - condition:
+    - type: slot
+      name: name
+      value: ạ
+    text: "Dạ em không biết ạ. Cho em xin tên của {pronoun} được không ạ?"
+  - text : "Em biết chứ. {pronoun} {name} là khách quen của em mà"
+
+  utter_bot_name:
+  - text: "Dạ em tên là trợ lý số eTouch. Em ở đây để hỗ trợ tư vấn về các dịch vụ Đầu số, Thiết bị và Tổng đài."
+
+  # utter_chào:
+  #   - text: Chào quý khách! Em là trợ lý số của công ty, em có thể biết tên quý khách được không ạ? 
+  # utter_hỏi_danh_mục_sản_phẩm:
+  #   - text: Dạ vâng {pronoun} {name}. Chúng em cung cấp các dịch vụ về Đầu số, Tổng đài và Thiết bị. Không biết {pronoun} muốn tìm hiểu về dịch vụ nào?
+  # utter_cung_cấp_thông_tin_thiết_bị:
+  #   - text: "Hiện bên em đang có một số thiết bị nổi bật như:\n+ Tai nghe DQN HU810\n+ Webcam DQN C620\n+ Điện thoại DQN N1\n{pronoun} có hứng thú với 
+  #   sản phẩm nào không?"
+  # utter_phone:
+  #   - text: "Về điện thoại IP phổ thông DQN N1 của bên em cung cấp sẽ mang đến chất lượng âm thanh HD vượt trội, cùng màn hình 132*48px 
+  #   đèn nền tiện lợi.\nĐây là một sự lựa chọn hoàn hảo cho doanh nghiệp của {pronoun} nếu như {pronoun} đang tìm kiếm một điện thoại IP chất lượng 
+  #   cao, cùng nhiều tính năng với chi phí hợp lý.\nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin 
+  #   chi tiết sản phẩm\nHoặc {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/dien-thoai-ip-pho-thong-dqn-n1/>"
+  # utter_headphone:
+  #   - text: "Với tai nghe tổng đài DQN HU810 có tích hợp công nghệ AI loại bỏ 99% tiếng ồn, cuộc gọi của {pronoun} sẽ không còn bị ảnh hưởng bởi môi 
+  #   trường ồn ào xung quanh nữa.\nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin chi tiết sản 
+  #   phẩm\nHoặc {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/tai-nghe-tong-dai-dqn-hu810/>"
+  # utter_webcam:
+  #   - text: "Với thiết kế nhỏ gọn, Webcam Full HD 1080p C620 có thể lắp đặt ở bất cứ đâu và là sự lựa chọn lý tưởng cho hoạt động cộng tác cá nhân 
+  #   của {pronoun}.\nEm có thể giúp {pronoun} liên hệ tới bộ phận bán hàng để biết thêm về giá thành cũng như thông tin chi tiết sản phẩm\nHoặc 
+  #   {pronoun} có thể tham khảo thêm tại website của công ty <https://dqn.vn/vi/webcam-hop-truc-tuyen-dqn-c620-full-hd/>"
   
-  utter_tạm_biệt:
-    - text: Xin kính chào tạm biệt {pronoun} {name}
+  # utter_cung_cấp_thông_tin_đầu_số:
+  #   - text: Dạ bên em hiện có đầu số 1000, đầu số 1001 và đầu số 1002 ạ. {pronoun} muốn đăng ký đầu số nào ạ?
+  
+  # utter_đầu_1000:
+  #   - text: Dạ đầu số 1000 hiện đang có giá là 1000$
+ 
+  # utter_đầu_1001:
+  #   - text: Dạ đầu số 1001 hiện đang có giá là 2000$
+  
+  # utter_đầu_1002:
+  #   - text: Dạ đầu số 1002 hiện đang có giá là 3000$
+ 
+  # utter_cung_cấp_thông_tin_tổng_đài:
+  #   - text: Dạ tổng đài bên em hiện có 3 gói dịch vụ chính. Bao gồm gói Pro, gói Business và gói Custom. {pronoun} muốn đăng ký gói nào ạ?
+  
+  # utter_gói_Pro:
+  #   - text: Gói Pro bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
+  
+  # utter_gói_Business:
+  #   - text: Gói Business bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
+  
+  # utter_gói_Custom:
+  #   - text: Gói Custom bao gồm bla bla. {pronoun} có thể tham khảo thêm thông tin tại <https://ccall.vn/bang-gia/>
+  
+  # utter_chuyển_tới_agent:
+  #   - text: "Dạ đợi em chút. Để em kết nối tới bộ phận bán hàng giúp {pronoun} nhá.\nĐang kết nối..."
+ 
+  # utter_tìm_hiểu_thêm:
+  #   - text: "Dạ {pronoun}. Vậy {pronoun} có muốn biết thêm về sản phẩm nào nữa không ạ?"
+  
+  # utter_tạm_biệt:
+  #   - text: Xin kính chào tạm biệt {pronoun} {name}
+
+actions:
+  - action_test
 
 entities:
   - pronoun
@@ -95,7 +157,7 @@ slots:
         entity: pronoun
   name:
     type: text
-    influence_conversation: false
+    influence_conversation: true
     initial_value: ạ
     mappings:
       - type: from_entity

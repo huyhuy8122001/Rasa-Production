@@ -1,0 +1,18 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kh\\u00e1ch_nh\\u1ea7m\"}}]": "utter_hỏi_danh_mục_sản_phẩm",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kh\\u00e1ch_nh\\u1ea7m\"}}, {\"prev_action\": {\"action_name\": \"utter_h\\u1ecfi_danh_m\\u1ee5c_s\\u1ea3n_ph\\u1ea9m\"}, \"user\": {\"intent\": \"kh\\u00e1ch_nh\\u1ea7m\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kh\\u00e1ch_nh\\u1ea7m\"}}, {\"prev_action\": {\"action_name\": \"utter_h\\u1ecfi_danh_m\\u1ee5c_s\\u1ea3n_ph\\u1ea9m\"}, \"user\": {\"intent\": \"kh\\u00e1ch_nh\\u1ea7m\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"kh\\u00e1ch_nh\\u1ea7m\"}}]",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "predicting default action with intent back"
+    ]
+  }
+}
