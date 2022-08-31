@@ -2,14 +2,16 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - Chào
-    - Xin chào
+    - chào
+    - xin chào
     - hi
     - hello
     - chào em
     - chào buổi sáng
     - chào buổi chiều
     - chào buổi tối
+    - alo
+    - Alo
 
 - intent: ask_menu
   examples: |
@@ -45,6 +47,43 @@ nlu:
     - [anh](pronoun) [Trung Tín](name)
     - [anh](pronoun) [Huỳnh Trung Tín](name)
     - tên [anh](pronoun) là [Tín](name)
+    - [anh](pronoun) [Tài](name)
+    - [anh](pronoun) [Ngọc Tài](name)
+    - [anh](pronoun) [Phạm Ngọc Tài](name)
+    - tên [anh](pronoun) là [Tài](name)
+    - [anh](pronoun) [Toán](name)
+    - [anh](pronoun) [Quang Toán](name)
+    - [anh](pronoun) [Nguyễn Quang Toán](name)
+    - tên [anh](pronoun) là [Toán](name)
+    - [anh](pronoun) [Đại](name)
+    - [anh](pronoun) [Văn Đại](name)
+    - [anh](pronoun) [Nguyễn Văn Đại](name)
+    - tên [anh](pronoun) là [Đại](name)
+    - [anh](pronoun) [Thái](name)
+    - [anh](pronoun) [Bá Thái](name)
+    - [anh](pronoun) [Trần Bá Thái](name)
+    - tên [anh](pronoun) là [Thái](name)
+    - [anh](pronoun) [Dũng](name)
+    - [anh](pronoun) [Văn Dũng](name)
+    - [anh](pronoun) [Phạm Văn Dũng](name)
+    - tên [anh](pronoun) là [Dũng](name)
+    - [anh](pronoun) [Dũng](name)
+    - [anh](pronoun) [Việt Dũng](name)
+    - [anh](pronoun) [Phạm Việt Dũng](name)
+    - tên [anh](pronoun) là [Dũng](name)
+
+- intent: DQN
+  examples: |
+    - DQN
+    - DQN là gì
+    - DQN nghĩa là gì vậy em
+    - từ DQN viết tắt của gì thế
+    - nghĩa DQN
+    - DQN?
+    - dqn
+    - dqn viết tắt của gì
+    - dqn là gì
+    - dqn?
 
 - intent: device
   examples: |
@@ -56,6 +95,11 @@ nlu:
     - làm rõ thiết bị hơn xem nào
     - thiết bị đi em
     - thiết bị nha e
+    - t bị
+    - thiết bi
+    - thiet bi
+    - thiet bị
+    - t bi
 
 - intent: phone
   examples: |
@@ -68,6 +112,11 @@ nlu:
     - điện thoại DQN N1
     - điện thoại N1
     - điện thoại ip
+    - cho [chị](pronoun) xem điện thoại N1 đi
+    - cho [chị](pronoun) xem điện thoại đi
+    - cho [anh](pronoun) xem N1 đi
+    - dien thoai
+    - dien thoai co gi xin ko e
 
 - intent: webcam
   examples: |
@@ -79,6 +128,10 @@ nlu:
     - webcam này có gì tốt hơn những loại khác không
     - webcam DQN C620
     - webcam C620
+    - cho [chị](pronoun) xem webcam đi
+    - cho [chị](pronoun) xem webcam C620 đi
+    - cho [anh](pronoun) xem C620 đi
+    - webcam
 
 - intent: headphone
   examples: |
@@ -90,6 +143,10 @@ nlu:
     - tai nghe này có gì tốt hơn những loại khác không
     - tai nghe DQN HU810
     - tai nghe HU810
+    - cho [anh](pronoun) xem HU810 đi
+    - cho [chị](pronoun) xem tai nghe HU810 đi
+    - cho [chị](pronoun) xem tai nghe đi
+    - headphone
 
 - intent: affirm_handover
   examples: |
@@ -125,6 +182,24 @@ nlu:
     - không [anh](pronoun) cảm ơn nha
     - ko [chị](pronoun) cảm ơn nha
 
+- intent: deny
+  examples: |
+    - không
+    - ko
+    - no
+
+- intent: bye
+  examples: |
+    - tạm biệt 
+    - bai bai
+    - baibai
+    - byebye
+    - bye bye
+    - goodbye
+    - gud bye
+    - byee
+    - chào tạm biệt
+
 - intent: thankyou
   examples: |
     - cảm ơn e
@@ -155,6 +230,31 @@ nlu:
     - ngu quá
     - khôn lên đi
     - chời ơi là chời chán quá nha
+    - em dốt lắm
+    - e dốt quá
+    - dốt
+    - thiểu năng quá đi
+    - chán thế
+
+- intent: satisfy
+  examples: |
+    - tốt rồi
+    - e giỏi quá
+    - em đỉnh quá
+    - đỉnh quá
+    - quá xịn
+    - tuyệt vời
+    - hay quá e ơi
+    - duyệt
+    - rất thông minh
+    - thông minh đấy
+    - đáng khen đấy
+    - ổn
+    - xịn đấy
+    - ngon đấy
+    - đc đấy
+    - đc
+    - giỏi phết
 
 - intent: ask_own_name
   examples: |

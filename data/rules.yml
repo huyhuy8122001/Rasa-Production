@@ -6,10 +6,15 @@ rules:
   - intent: greet
   - action: utter_greet
 
-# - rule: khách cung cấp tên
-#   steps:
-#   - intent: give_name
-#   - action: utter_menu
+- rule: tạm biệt
+  steps:
+  - intent: bye
+  - action: utter_bye
+
+- rule: khách cung cấp tên
+  steps:
+  - intent: give_name
+  - action: utter_menu
 
 - rule: khách chọn nhầm
   steps:
@@ -41,7 +46,17 @@ rules:
   - intent: ask_bot_name
   - action: utter_bot_name
 
-- rule: test
+- rule: DQN
   steps: 
-  - intent: give_name
-  - action: action_test
+  - intent: DQN
+  - action: utter_dqn
+
+- rule: satisfy
+  steps:
+  - intent: satisfy
+  - action: utter_thankyou
+
+# - rule: test
+#   steps: 
+#   - intent: give_name
+#   - action: action_test
